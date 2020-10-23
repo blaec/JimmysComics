@@ -34,5 +34,22 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <ListView Grid.Column="1" SelectionMode="Single"
+                  ItemsSource="{Binding CurrentQueryResults}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Image}" Margin="0,0,20,0"
+                               Stretch="UniformToFill" Width="25" Height="25"
+                               VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Title}" />
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
     </Grid>
 </Window>
